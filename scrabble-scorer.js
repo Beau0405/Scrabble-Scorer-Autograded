@@ -95,16 +95,16 @@ const scoringAlgorithms = [simpleScore, bonusVowels, scrabbleScore];
 
 function scorerPrompt(word) {
 
-let scorerFunction = input.question("Which scoring algorithm would you like to use?\n\n 0 - Simple: One point per character \n 1 - Vowel Bonus: Vowels are worth 3 points\n 2 - Scrabble: Uses scrabble point system\n Enter 0, 1, or 2:")
+let scorerFunction = input.question("Which scoring algorithm would you like to use?\n\n 0 - Simple: One point per character \n 1 - Vowel Bonus: Vowels are worth 3 points\n 2 - Scrabble: Uses scrabble point system\n Enter 0, 1, or 2: ")
 
 if (scorerFunction === "0"){
-   console.log("Score for :", scoringAlgorithms[0].scorerFunction(word));
+   console.log(`Score for "${word}":`, scoringAlgorithms[0].scorerFunction(word));
 }
 if (scorerFunction === "1"){
-   console.log("Score for:", scoringAlgorithms[1].scorerFunction(word));
+   console.log(`Score for "${word}":`, scoringAlgorithms[1].scorerFunction(word));
 }
 if (scorerFunction === "2"){
-   console.log("Score for:",scoringAlgorithms[2].scorerFunction(word));
+   console.log(`Score for "${word}":`,scoringAlgorithms[2].scorerFunction(word));
 }
 };
 
